@@ -8,7 +8,7 @@ export interface IGrid {
 // using class
 export class ICell {
   id: number;
-  flipped: boolean;
+  flip: boolean;
   text: string;
   changed: boolean;
 }

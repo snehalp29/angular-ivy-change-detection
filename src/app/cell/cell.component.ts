@@ -34,12 +34,31 @@ export class CellComponent
     console.log('init');
   }
   ngOnChanges(changes: SimpleChanges): void {
-    throw new Error('Method not implemented.');
+    // throw new Error('Method not implemented.');
   }
+
+  ngAfterViewChecked() {
+    const elem = this.el.nativeElement.querySelectorAll('div.flipper')[0];
+    if (!elem) {
+      return;
+    }
+
+    // Trigger a highlight for visualization
+    const highlightCSS = 'changed';
+    elem.classList.add(highlightCSS);
+    this.zone.runOutsideAngular(() => {
+      setTimeout(() => {
+        elem.classList.remove(highlightCSS);
+      }, 500);
+    });
+  }
+
   ngDoCheck(): void {
-    throw new Error('Method not implemented.');
+    // throw new Error('Method not implemented.');
   }
-  ngAfterViewChecked(): void {
-    throw new Error('Method not implemented.');
+
+  onClick(): void {
+    console.log('onclick');
+    this.cellDataService.flipCell(this.data.id);
   }
 }
