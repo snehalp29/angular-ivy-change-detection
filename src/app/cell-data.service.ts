@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import * as _ from 'lodash';
 import { IGrid, ICell } from './interfaces/models';
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class CellDataService {
   readonly TOTAL: number = 500;
 
