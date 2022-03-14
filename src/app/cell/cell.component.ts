@@ -14,7 +14,7 @@ import { CellDataService } from '../cell-data.service';
 import { ICell } from '../interfaces/models';
 
 @Component({
-  selector: 'app-cell',
+  selector: 'my-cell',
   templateUrl: './cell.component.html',
   styleUrls: ['./cell.component.css'],
 })

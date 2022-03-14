@@ -2,7 +2,7 @@ import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { IGrid } from '../interfaces/models';
 
 @Component({
-  selector: 'app-grid',
+  selector: 'my-grid',
   templateUrl: './grid.component.html',
   styleUrls: ['./grid.component.css'],
   encapsulation: ViewEncapsulation.None,
